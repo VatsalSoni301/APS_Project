@@ -1,0 +1,4 @@
+https://stackoverflow.com/questions/7467079/difference-between-avl-trees-and-splay-trees
+
+https://sites.google.com/site/mxu2015kb/computers/algorithm/tree/search-trees/avl-tree-vs-splay-tree
+
