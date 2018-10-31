@@ -376,12 +376,13 @@ int main()
 {
     ll total, query, choice, num;
     struct node *root = NULL;
-
-    while (1)
+    cin >> query;
+    ofstream fptr11, fptr12;
+    fptr11.open("test_search_avl.txt", ios::out);
+    fptr12.open("test_delete_avl.txt", ios::out);
+    while (query--)
     {
         cin >> choice;
-        if (choice == 0)
-            break;
         switch (choice)
         {
         case 1:
@@ -392,14 +393,18 @@ int main()
             cin >> num;
             found = false;
             root = deleteSpecificNode(root, num);
+            fptr12 << to_string(found) << endl;
             break;
         case 3:
             cin >> num;
+            fptr11 << to_string(searchElement(root, num)) << endl;
             break;
         case 4:
             inorder(root);
             break;
         }
     }
+    fptr11.close();
+    fptr12.close();
     return 0;
 }

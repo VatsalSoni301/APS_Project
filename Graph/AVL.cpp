@@ -376,12 +376,13 @@ int main()
 {
     ll total, query, choice, num;
     struct node *root = NULL;
-
-    while (1)
+    cin >> query;
+    clock_t start, end;
+    double cpu_time_used;
+    start = clock();
+    while (query--)
     {
         cin >> choice;
-        if (choice == 0)
-            break;
         switch (choice)
         {
         case 1:
@@ -395,11 +396,15 @@ int main()
             break;
         case 3:
             cin >> num;
+            searchElement(root, num);
             break;
         case 4:
             inorder(root);
             break;
         }
     }
+    end = clock();
+    cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
+    cout << cpu_time_used * 1000;
     return 0;
 }

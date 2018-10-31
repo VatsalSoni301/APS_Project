@@ -295,39 +295,27 @@ int main()
 {
     splaytree sp;
     ll choice, num;
-    while (1)
+    ll query;
+    cin >> query;
+    clock_t start, end;
+    double cpu_time_used;
+    start = clock();
+    while (query--)
     {
-        cout << "\n1.insert";
-        cout << "\n2.delete";
-        cout << "\n3.search";
-        cout << "\n0.Exit";
-        //cout << "\n4.Inorder";
-        cout << "\nEnter your choice : ";
         cin >> choice;
-        if (choice == 0)
-            break;
         switch (choice)
         {
         case 1:
-            cout << "\nEnter number you want to insert : ";
             cin >> num;
             sp.insertnode(num);
             break;
         case 2:
-            cout << "\nEnter number you want to delete : ";
             cin >> num;
-            if (sp.deletenode(num))
-                cout << "\nElement deleted successfully :) ";
-            else
-                cout << "\nElement not found :( ";
+            sp.deletenode(num);
             break;
         case 3:
-            cout << "\nEnter number you want to search : ";
             cin >> num;
-            if (sp.search(num))
-                cout << "\nElement found :) ";
-            else
-                cout << "\nElement not found :( ";
+            sp.search(num);
             break;
         case 4:
             // cout << "\nLevel order : ";
@@ -338,5 +326,8 @@ int main()
             break;
         }
     }
+    end = clock();
+    cpu_time_used = ((double)(end - start)) / CLOCKS_PER_SEC;
+    cout << cpu_time_used * 1000;
     return 0;
 }
