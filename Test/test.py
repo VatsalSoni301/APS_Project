@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import random,os
 
 
-def insertTest():
+def inorderTest():
 	
 	i=10001
 	j=0
@@ -101,7 +101,7 @@ os.system(cmd)
 cmd1 = "g++ AVL.cpp -o AVL.out"
 os.system(cmd1)
 
-y=insertTest()
+y=inorderTest()
 if y == 1:
 	print "Inorder TestCase Passed"
 else:

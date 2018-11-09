@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt 
 import random,os
 
-#inputs = [10,100,1000,10000,100000,1000000,10000000]
-inputs = [10,100,1000,10000]
+inputs = [10,100,1000,10000,100000,1000000,10000000]
+#inputs = [10,100,1000,10000]
 def insert():
 	
 	y = []
@@ -152,12 +152,12 @@ while 1:
 	choice = int(raw_input())
 
 	if choice == 1:
-		y=insert()
+		insert()
 	elif choice == 2:
-		y=delete()
+		delete()
 	elif choice == 3:
-		y=search_random()
+		search_random()
 	elif choice == 4:
-		y=search_frequent()
+		search_frequent()
 	else:
 		break

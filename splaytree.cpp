@@ -150,7 +150,7 @@ class splaytree
         //if key already present in tree
         if (base->data == key)
         {
-            //cout << "Already exist key !!!" << endl;
+            cout << "Already exist key !!!" << endl;
             return;
         }
         else if (base->data < key)
@@ -257,11 +257,7 @@ class splaytree
         if (root != NULL)
         {
             inorder(root->left);
-            //cout<<root->data<<endl;
-            ofstream fptr1;
-            fptr1.open("test_inorder_splay.txt", ios::app);
-            fptr1 << root->data << endl;
-            fptr1.close();
+            cout<<root->data<<" ";
             inorder(root->right);
         }
     }
@@ -297,11 +293,12 @@ int main()
     ll choice, num;
     while (1)
     {
+        cout<<"\n";
         cout << "\n1.insert";
         cout << "\n2.delete";
         cout << "\n3.search";
+        cout << "\n4.Inorder";
         cout << "\n0.Exit";
-        //cout << "\n4.Inorder";
         cout << "\nEnter your choice : ";
         cin >> choice;
         if (choice == 0)
@@ -330,11 +327,11 @@ int main()
                 cout << "\nElement not found :( ";
             break;
         case 4:
-            // cout << "\nLevel order : ";
-            // sp.levelOrder(sp.base);
-            // cout << "\nPreoder : ";
-            // sp.preOrder(sp.base);
+            cout<<"\nInorder Traversal : ";
             sp.inorder(sp.base);
+            break;
+        default:
+            cout<<"\nPlease Enter correct choice !!! ";
             break;
         }
     }
