@@ -3,11 +3,11 @@
 **Platform:** Linux <br/>
 **Software Requirement**
 1. Python version 2.7
-   * To install python : ```sudo apt-get install python2.7 python-pip```
+   * **To install python :** ```sudo apt-get install python2.7 python-pip```
 2. G++ compiler
-   * To install G++ : ```sudo apt-get install g++```
+   * **To install G++ :** ```sudo apt-get install g++```
 3. Matplotlib library for graph
-   * To install Matplot library : ```pip install matplotlib```
+   * **To install Matplot library :** ```pip install matplotlib```
    
 ## How to run project
 1. To compile splay tree and AVL tree
